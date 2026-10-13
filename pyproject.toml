@@ -1,0 +1,10 @@
+[project]
+name = "edge-traffic-platform"
+version = "0.1.0"
+dependencies = [
+    "sumo-rl>=1.4.5",
+    "eclipse-sumo",
+    "stable-baselines3[extra]>=2.3",
+    "pandas",
+    "matplotlib",
+]

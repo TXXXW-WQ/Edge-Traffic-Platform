@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  sumo-env:
+    build: .
+    container_name: sumo_rl_container
+    volumes:
+      - .:/app
+    environment:
+      - DISPLAY=${DISPLAY}
+    devices:
+      - /dev/dri:/dev/dri # グラフィックアクセラレーション用（環境により不要な場合もあります）
+    # Windows側（WSLg）のX11ソケットを共有
+    volumes_from: []
+    ipc: host
