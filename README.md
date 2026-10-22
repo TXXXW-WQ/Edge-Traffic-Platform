@@ -10,3 +10,5 @@ uv run python src/edge_traffic_platform/minimal_gui_check.py --random
 uv run python src/edge_traffic_platform/minimal_gui_check.py
 
 ※GUIがうまく起動しないはWSLを再起動！
+
+
