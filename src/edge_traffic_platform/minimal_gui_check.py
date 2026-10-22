@@ -15,14 +15,14 @@ args = parser.parse_args()
 net_dir = Path(sumo_rl.__file__).parent / "nets" / "single-intersection"
 
 env = sumo_rl.SumoEnvironment(
-    net_file=str(net_dir / "single-intersection.net.xml"),
-    route_file=str(net_dir / "single-intersection.rou.xml"),
+    net_file="src/sumo/complex.net.xml", 
+    route_file="src/sumo/complex.rou.xml", 
     single_agent=True,
     use_gui=True,
     num_seconds=1000,
     additional_sumo_cmd="--delay 100",  # 1ステップ100ms
 )
-model = None if args.random else DQN.load("dqn_test.zip")
+model = None if args.random else DQN.load("dqn_multiagent_test.zip")
 
 obs, info = env.reset()
 done = False

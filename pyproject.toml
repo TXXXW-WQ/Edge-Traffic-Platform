@@ -6,5 +6,7 @@ dependencies = [
     "eclipse-sumo",
     "stable-baselines3[extra]>=2.3",
     "pandas",
+    "pettingzoo==1.23.1", # ここを追加
     "matplotlib",
+    "supersuit==3.9.0", # ここを追加
 ]

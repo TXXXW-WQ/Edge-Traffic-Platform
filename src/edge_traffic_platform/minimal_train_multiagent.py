@@ -4,8 +4,8 @@ from stable_baselines3 import DQN
 from stable_baselines3.common.vec_env import VecMonitor
 
 env = sumo_rl.parallel_env(
-    net_file="path/to/complex.net.xml", # 適宜読み替え
-    route_file="path/to/complex.rou.xml", # 適宜読み替え
+    net_file="src/sumo/complex.net.xml", # 適宜読み替え
+    route_file="src/sumo/complex.rou.xml", # 適宜読み替え
     use_gui=False,
     num_seconds=1000,
 )
