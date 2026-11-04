@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-10-22T14:04:48.955182+09:00 by Eclipse SUMO netedit 1.25.0
+<!-- generated on 2026-10-29T14:22:59.947486+09:00 by Eclipse SUMO netedit 1.25.0
 <neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
@@ -242,23 +242,23 @@
     </edge>
 
     <tlLogic id="J2" type="static" programID="0" offset="0">
-        <phase duration="33" state="GGgrrrGGgrrr"/>
-        <phase duration="3"  state="yygrrryygrrr"/>
-        <phase duration="6"  state="rrGrrrrrGrrr"/>
+        <phase duration="6"  state="GGgrrrGGgrrr"/>
+        <phase duration="3"  state="yyyrrryyyrrr"/>
+        <phase duration="3"  state="rrGrrrrrGrrr"/>
         <phase duration="3"  state="rryrrrrryrrr"/>
-        <phase duration="33" state="rrrGGgrrrGGg"/>
-        <phase duration="3"  state="rrryygrrryyg"/>
-        <phase duration="6"  state="rrrrrGrrrrrG"/>
+        <phase duration="6"  state="rrrGGgrrrGGg"/>
+        <phase duration="3"  state="rrryyyrrryyy"/>
+        <phase duration="3"  state="rrrrrGrrrrrG"/>
         <phase duration="3"  state="rrrrryrrrrry"/>
     </tlLogic>
     <tlLogic id="J6" type="static" programID="0" offset="0">
-        <phase duration="33" state="GGgrrrGGgrrr"/>
-        <phase duration="3"  state="yygrrryygrrr"/>
-        <phase duration="6"  state="rrGrrrrrGrrr"/>
+        <phase duration="6"  state="GGgrrrGGgrrr"/>
+        <phase duration="3"  state="yyyrrryyyrrr"/>
+        <phase duration="3"  state="rrGrrrrrGrrr"/>
         <phase duration="3"  state="rryrrrrryrrr"/>
-        <phase duration="33" state="rrrGGgrrrGGg"/>
-        <phase duration="3"  state="rrryygrrryyg"/>
-        <phase duration="6"  state="rrrrrGrrrrrG"/>
+        <phase duration="6"  state="rrrGGgrrrGGg"/>
+        <phase duration="3"  state="rrryyyrrryyy"/>
+        <phase duration="3"  state="rrrrrGrrrrrG"/>
         <phase duration="3"  state="rrrrryrrrrry"/>
     </tlLogic>
 

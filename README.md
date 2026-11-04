@@ -23,5 +23,5 @@ uv run python "$SUMO_HOME/tools/randomTrips.py" \
   -n src/sumo/complex.net.xml \
   -r src/sumo/complex.rou.xml \
   -e 1000 \
-  -p 3.0 \
-  --fringe-factor 100# Edge-Traffic-Platform
+  -p 10.0
+  
