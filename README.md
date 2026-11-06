@@ -1,7 +1,9 @@
 学習スクリプト実行
+(単一エージェント時)
 export SUMO_HOME="$(uv run python -c 'import sumo; print(sumo.SUMO_HOME)')"
 uv run python src/edge_traffic_platform/minimal_train.py
 
+(マルチエージェント時)
 export SUMO_HOME="$(uv run python -c 'import sumo; print(sumo.SUMO_HOME)')"
 uv run python src/edge_traffic_platform/minimal_train_multiagent.py
 
@@ -23,5 +25,5 @@ uv run python "$SUMO_HOME/tools/randomTrips.py" \
   -n src/sumo/complex.net.xml \
   -r src/sumo/complex.rou.xml \
   -e 1000 \
-  -p 10.0
+  -p 3.0
   

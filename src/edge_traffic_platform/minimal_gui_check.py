@@ -19,7 +19,7 @@ env = sumo_rl.parallel_env(
     use_gui=True,
     num_seconds=1000,
     reward_fn="diff-waiting-time",
-    additional_sumo_cmd="--delay 100",  # 1ステップ100ms
+    additional_sumo_cmd="--delay 0",  # 100:現実に近い速度 / 0:時短
 )
 
 # 2. 学習時と同じ前処理（パディング）を適用
