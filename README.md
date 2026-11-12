@@ -22,8 +22,8 @@ routeファイルを生成
 ※-pの値を変更することで交通量を変更(p秒に一台)
 export SUMO_HOME="$(uv run python -c 'import sumo; print(sumo.SUMO_HOME)')"
 uv run python "$SUMO_HOME/tools/randomTrips.py" \
-  -n src/sumo/complex.net.xml \
-  -r src/sumo/complex.rou.xml \
+  -n src/sumo/kousaten5.net.xml \
+  -r src/sumo/kousaten5.rou.xml \
   -e 1000 \
   -p 3.0
   

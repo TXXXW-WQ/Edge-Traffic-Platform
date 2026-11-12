@@ -12,8 +12,8 @@ log_dir = Path("./logs")
 log_dir.mkdir(exist_ok=True)
 
 env = sumo_rl.parallel_env(
-    net_file="src/sumo/complex.net.xml",
-    route_file="src/sumo/complex.rou.xml",
+    net_file="src/sumo/kousaten5.net.xml",
+    route_file="src/sumo/kousaten5.rou.xml",
     use_gui=False,
     num_seconds=1000,
     reward_fn="diff-waiting-time",
