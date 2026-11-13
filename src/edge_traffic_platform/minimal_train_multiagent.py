@@ -7,13 +7,15 @@ from stable_baselines3.common.vec_env import VecMonitor
 import sumo_rl
 import supersuit as ss
 
-# 1. ログを保存するディレクトリを指定
+# 1. ログ＆モデルを保存するディレクトリを指定
 log_dir = Path("./logs")
 log_dir.mkdir(exist_ok=True)
+dqn_dir = Path("./dqn")
+dqn_dir.mkdir(exist_ok=True)
 
 env = sumo_rl.parallel_env(
-    net_file="src/sumo/kousaten5.net.xml",
-    route_file="src/sumo/kousaten5.rou.xml",
+    net_file="src/sumo/complex.net.xml",
+    route_file="src/sumo/complex.rou.xml",
     use_gui=False,
     num_seconds=1000,
     reward_fn="diff-waiting-time",
@@ -31,7 +33,7 @@ env = ss.concat_vec_envs_v1(
 env = VecMonitor(env, filename=str(log_dir / "monitor.csv"))
 
 model = DQN("MlpPolicy", env, verbose=1)
-model.learn(total_timesteps=5000)
+model.learn(total_timesteps=2000)
 model.save("dqn_multiagent_test")
 
 print("done: dqn_multiagent_test.zip を保存しました")
@@ -45,18 +47,6 @@ if csv_files:
   # エピソードごとの報酬（r）の推移をプロット
   plt.figure(figsize=(10, 5))
   plt.plot(df.index, df["r"], alpha=0.6, label="Episode Reward")
-
-  # トレンドを見やすくするために移動平均（Moving Average）線も追加
-  window_size = 10
-  if len(df) >= window_size:
-    df["rolling_mean"] = df["r"].rolling(window=window_size).mean()
-    plt.plot(
-        df.index,
-        df["rolling_mean"],
-        color="red",
-        linewidth=2,
-        label=f"Rolling Mean ({window_size} episodes)",
-    )
 
   plt.xlabel("Episode")
   plt.ylabel("Reward")

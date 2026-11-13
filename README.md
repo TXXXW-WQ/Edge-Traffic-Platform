@@ -5,7 +5,7 @@ uv run python src/edge_traffic_platform/minimal_train.py
 
 (マルチエージェント時)
 export SUMO_HOME="$(uv run python -c 'import sumo; print(sumo.SUMO_HOME)')"
-uv run python src/edge_traffic_platform/minimal_train_multiagent.py
+uv run python src/edge_traffic_platform/kousaten5_agent.py
 
 
 sumo-gui
@@ -25,5 +25,5 @@ uv run python "$SUMO_HOME/tools/randomTrips.py" \
   -n src/sumo/kousaten5.net.xml \
   -r src/sumo/kousaten5.rou.xml \
   -e 1000 \
-  -p 3.0
+  -p 1.0
   

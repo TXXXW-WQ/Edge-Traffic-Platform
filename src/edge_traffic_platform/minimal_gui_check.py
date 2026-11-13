@@ -4,6 +4,9 @@ import sumo_rl
 from stable_baselines3 import DQN
 import supersuit as ss
 
+
+# sumo-guiでの動作確認用スクリプト
+
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--random",
@@ -27,7 +30,8 @@ env = ss.pad_observations_v0(env)
 env = ss.pad_action_space_v0(env)
 
 # モデルの読み込み
-model = None if args.random else DQN.load("dqn_multiagent_test.zip")
+dqn_dir = Path("dqn")
+model = None if args.random else DQN.load(dqn_dir / "dqn_multiagent_test.zip")
 
 observations, infos = env.reset()
 done = False
